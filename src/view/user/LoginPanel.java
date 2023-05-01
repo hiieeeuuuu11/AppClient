@@ -19,6 +19,7 @@ import javax.swing.SwingUtilities;
 import javax.swing.border.Border;
 
 
+import controller.ConfigBTL;
 import controller.LoginService;
 import controller.SocketConnect;
 import model.User;
@@ -29,7 +30,7 @@ public class LoginPanel extends JPanel implements ActionListener{
     private JTextField usernameField, passwordField;
     private JButton loginButton;
     private JButton signupButton;
-    public static Socket socket = SocketConnect.cli(2606);
+    public static Socket socket = SocketConnect.cli(ConfigBTL.getSkPortLogin());
 
     //private WelcomePanel pcon = new WelcomePanel();
     public LoginPanel() {

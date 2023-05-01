@@ -3,6 +3,7 @@ package view.user;
 import javax.swing.*;
 import javax.swing.border.Border;
 
+import controller.ConfigBTL;
 import controller.LoginService;
 import controller.SignUpService;
 import controller.SocketConnect;
@@ -16,7 +17,7 @@ public class SignUpPanel extends JPanel {
     private JLabel nameLabel,  passwordLabel, confirmPasswordLabel;
     private JTextField nameField, passwordField, confirmPasswordField;
     private JButton signupButton;
-    public static Socket socket1 = SocketConnect.cli(2607);
+    public static Socket socket1 = SocketConnect.cli(ConfigBTL.getSkPortSignup());
     //private WelcomePanel pcon = new WelcomePanel();
     public SignUpPanel() {
         Border bo = BorderFactory.createEmptyBorder(20, 20, 20, 20);

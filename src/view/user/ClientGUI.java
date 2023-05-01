@@ -1,6 +1,7 @@
 package view.user;
 
 import BoomGame.main.RunGame;
+import controller.ConfigBTL;
 import model.User;
 
 import java.awt.BorderLayout;
@@ -62,7 +63,7 @@ public class ClientGUI extends JFrame{
 
     public void execute() throws IOException {
 
-        Socket client = new Socket("localhost", 15797);
+        Socket client = new Socket("localhost", ConfigBTL.getSkPortChat());
         Thread read = new Thread(new Runnable() {
 
             public void run() {
