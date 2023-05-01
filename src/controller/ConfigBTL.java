@@ -5,7 +5,7 @@ import java.io.IOException;
 import java.util.Properties;
 
 public class ConfigBTL {
-    private static final String CONFIG_FILE_NAME = "E:/FinalApp/AppClient (1)/config.properties";
+    private static final String CONFIG_FILE_NAME = "config.properties";
     private static Properties configProperties;
 
     static {
